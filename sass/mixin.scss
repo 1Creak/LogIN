@@ -1,0 +1,15 @@
+@mixin form ($padding-form:35px 0 20px 0){
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px grey;
+    padding: $padding-form;
+}
+@mixin text($font-size:24px,$color:white) {
+    font-family: 'OpenSans-regular';
+    font-size: $font-size;
+    color: $color;
+}
+@mixin title($font-size-title:40px) {
+    font-family: 'monserat-bold';
+    font-size: $font-size-title;
+}

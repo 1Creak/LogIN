@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'monserat-bold';
+    src: url('monserat-bold'),
+       url("../fonts/Montserrat-ExtraBold.ttf") format("ttf"),
+       url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans-bold';
+    src: url('OpenSans-bold'),
+       url("../fonts/OpenSans-Bold.ttf") format("ttf"),
+       url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans-regular';
+    src: url('OpenSans-regular'),
+       url("../fonts/OpenSans-Regular.ttf") format("ttf"),
+       url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: normal;
+}

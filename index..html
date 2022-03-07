@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Aries</title>
+</head>
+
+<body>
+    <header class="header box">
+        <nav class="header__nav">
+            <a href="#"><img src="./img/logo.svg" alt="logo"></a>
+            <ul class="header__list">
+                <li><a href="#">Games</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Market-place</a></li>
+                <li><a href="#">Contact-us</a></li>
+                <li><button id="login">Login</button></li>
+            </ul>
+        </nav>
+        <div class="header__text">
+            <h1>Contacts</h1>
+            <p>Feel free to get in touch with our support team!</p>
+        </div>
+        <h2><a href="tel:380505479229">Get in touch</a></h2>
+    </header>
+    <section class="feedback box">
+        <div class="feedback__message">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Email Address">
+            <select>
+                <option>Select Game</option>
+                <option>Apex Legends</option>
+                <option>League of Legends</option>
+                <option>Overwatch</option>
+                <option>Valorant</option>
+                <option>Destiny 2</option>
+            </select>
+            <textarea placeholder="Your message"></textarea>
+            <button>Send a message</button>
+        </div>
+        <div class="feedback__contact">
+            <div class="feedback__contact__wrapper">
+                <h2>Contact Us</h2>
+                <div class="feedback__contact__block">
+                    <div class="icon-pin"></div>
+                    <p>26 Neville Street<br> IBTHORPE,SPA11 4PA</p>
+                </div>
+                <div class="feedback__contact__block">
+                    <div class="icon-smartphone"></div>
+                    <p>+44 079 7110 6390</p>
+                </div>
+                <div class="feedback__contact__block">
+                    <div class="icon-email"></div>
+                    <p>info@ariesgg.com</p>
+                </div>
+                <ul class="feedback__contact__list">
+                    <li><a href="#"><img alt="social" src="./img/face.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/twit.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/inst.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/whats.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/skype.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/discord.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="redline">
+        <!-- <h5></h5> -->
+        <div class="box">
+            <div class="redline__block">
+                <img class="redline__logo" alt="logo" src="./img/logo.svg">
+                <ul class="redline__block__list">
+                    <li><a href="#"><img alt="social" src="./img/face.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/twit.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/inst.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/whats.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/skype.png"></a></li>
+                    <li><a href="#"><img alt="social" src="./img/discord.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="footer box">
+        <div class="footer__nav">
+            <div class="footer__nav__info">
+                <h3>Aries GG</h3>
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Blog</a>
+                <a href="#">Jobs</a>
+                <a href="#">Market-Place</a>
+            </div>
+            <div class="footer__nav__info">
+                <h3>Services</h3>
+                <a href="#">Division Boost</a>
+                <a href="#">Placement Boost</a>
+                <a href="#">Wins Boosting</a>
+                <a href="#">Account Leveling</a>
+                <a href="#">TFT PLacement Matches</a>
+            </div>
+            <div class="footer__nav__info">
+                <h3>Popular Games</h3>
+                <a href="#">League of Legends</a>
+                <a href="#">Apex Legends</a>
+                <a href="#">Destiny 2</a>
+                <a href="#">Overwatch</a>
+                <a href="#">Valorant</a>
+            </div>
+            <div class="footer__nav__info">
+                <h3>Support</h3>
+                <a href="#">Tutorial</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contast Us</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>Aries GG ⓒ2021 All Rights Reserved. All trademarks and logos belong to their
+                respective owners Designed by<span>Webcapitan.</span></p>
+            <img alt="visa" src="./img/visa.png">
+        </div>
+    </footer>
+    <section class="popup" id="popup">
+        <div class="popup__window">
+            <form class="form popup__window__info box" id="myform" >
+                <img alt="logo" class="popup__logo" src="./img/logo.svg">
+                <img width="15" height="15" src="./img/cross.png" alt="cross" id="close" style="margin-left:95%;">
+                <h4>Login</h4>
+                <label>Email address</label>
+                <input id="mail" type="email" name="email">
+                <label>Password</label>
+                <input id="userPassword" type="password" name="userPass">
+                <a href="#" id="frogot">Forgot password?</a>
+                <button id="logCheck">Login</button>
+            </form>
+            <div style="background-color: #181616;">
+                <div class="popup__window__line">
+                    <p>OR</p>
+                </div>
+                <div class="popup__window__btn">
+                    <button onclick="window.location.href = 'https://www.facebook.com'"><img src="./img/facebook.png" width="15" height="15" alt="href">facebook</button>
+                    <button onclick="window.location.href = 'https://www.google.com'"><img src="./img/google.png" width="15" height="15" alt="href">Google</button>
+                </div>
+                <p class="popup__window__register">Don't have an account?<a href="#">Register</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
