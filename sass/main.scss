@@ -5,16 +5,19 @@
 body {
     background-color: black;
     color: white;
+    overflow-x: hidden;
+    // overflow-y: hidden;
 }
 h1{
     @include title();
+    font-size: calc(20px + 20 * (100vw / 1800))
 }
 h2{
     @include title(30px);
 }
 h3{
     @include title(18px);
-    padding: 0 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 button{
     padding: 12px 35px;
@@ -60,8 +63,69 @@ label{
     &__nav {
         display: flex;
         justify-content: space-between;
+        &__menu{
+            @include burger();
+            display: none;
+            position: fixed;
+            right: -250px;
+            z-index: 2;
+            background-color: #181616;
+            padding: 10px 50px;
+            border-radius: 5%;
+            transition: 1s;
+            & li{
+                margin: 20px 0;
+                text-align: center;
+                width: max-content ;
+            }
+            & li:first-child{
+                margin-top: 70px;
+            }
+            & a:hover{
+                border-bottom: 2px solid #F20018;
+            }
+        }
+        & img{
+            right: 50px
+        }
+        &__burg{
+            @include burger();
+            display: none;
+            background-color: red;
+            padding: 30px;
+            right: 40px;
+            z-index: 3;
+            position: fixed;
+            border-radius: 50%;
+            box-shadow: 8px 5px 5px rgb(112, 7, 4);
+            cursor: pointer;
+        }
+        &__img{
+            @include burger();
+            display: none;
+            position: fixed;
+            z-index: 3;
+            width: 40px;
+            height: 3px;
+            top: 60px;
+            right: 50px;
+            background-color: white;
+        &:before,
+        &:after{
+            content: "";
+            position: absolute;
+            top: 9px;
+            width: 40px;
+            height: 3px;
+            background: white;
+        }
+        &:before{
+            top: -9px;
+        }
+        }
     }
     &__list {
+        @include nav();
         display: flex;
         align-items: center;
         justify-content: end;
@@ -71,10 +135,11 @@ label{
             font-size: 15px;
             text-transform: uppercase;
             padding: 5px;
-            &:hover:not(:last-child){
-                border-bottom: 2px solid #F20018;
+            & a:hover{
+                    border-bottom: 2px solid #F20018;
             }
         }
+
     }
     &__text{
         color: white;
@@ -82,23 +147,27 @@ label{
         margin: 208px 0px;
         p{
             @include text();
+            font-size: calc(10px + 14 * (100vw / 1800));
         }
     }
 }
 .feedback{
+    @include getintouch();
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
     &__message{
+        @include message();
         display: flex;
         flex-direction: column;
         width: 55%;
         & button{
-            width: 33%;
+            width: max-content;
         }
     }
     &__contact{
         &__wrapper{
+            @include contact();
             margin-top: -50px;
             width: 75%;
             border: 1px solid #8080804f;
@@ -115,6 +184,7 @@ label{
         &__list{
             display: flex;
             margin-top: 40px;
+            @include social();
             & li{
                 margin-right: 10px;
             }
@@ -128,6 +198,7 @@ label{
         display: flex;
         justify-content: end;
         align-items: center;
+        @include contactRedLine();
         &__list{
             display: flex;
             & li{
@@ -139,20 +210,24 @@ label{
     &__logo{
         position: absolute;
         left: 9%;
+        @include nav();
     }
 }
 .footer{
     &__nav{
-        display: flex;
-        justify-content: space-between;
+        @include summary();
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // display: flex;
+        // justify-content: space-between;
         padding: 50px 0;
-        width: 84%;
+        width: 110%;
         &__info{
             display: flex;
             flex-direction: column;
             & a{
                 font-family: 'OpenSans-regular';
-                font-size: 16px;
+                font-size: calc(9px + 7 * (100vw / 1800));
             }
         }
     }
@@ -164,13 +239,14 @@ label{
         align-items: center;
         & p{
             @include text(14px, #CCCCCC);
-            width: 55%;
+            // width: %;
+            white-space:normal;
         }
     }
 }
 .popup{
     display: none;
-    z-index: 2;
+    z-index: 6;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -260,4 +336,11 @@ label{
 }
 .error{
     margin-top: 0 !important;
+}
+.show{
+    right: 30px;
+    transition: 1s;
+}
+.f_logo{
+    @include logo();
 }

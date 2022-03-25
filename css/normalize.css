@@ -250,6 +250,7 @@ ul {
 a {
   text-decoration: none;
   color: white;
+  white-space: nowrap;
 }
 
 h1,
@@ -275,5 +276,9 @@ p {
 ul {
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
+}
+
+p, span, a, button, li {
+  white-space: nowrap;
 }
 /*# sourceMappingURL=normalize.css.map */

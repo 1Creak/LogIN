@@ -13,7 +13,25 @@
 <body>
     <header class="header box">
         <nav class="header__nav">
-            <a href="#"><img src="./img/logo.svg" alt="logo1"></a>
+            <a href="#">
+                <img class="f_logo" src="./img/logo.svg" alt="logo1">
+            </a>
+            <div>
+                <div id="burg" class="header__nav__burg"></div>
+                <label for="burg" id="circle" class="circle"></label>
+                <label for="burg" class="header__nav__img"></label>
+                <ul id="burgMenu" class="header__nav__menu">
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Tutorial</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Market-place</a></li>
+                    <li><a href="#">Contact-us</a></li>
+                    <li><button id="login">Login</button></li>
+                </ul>
+            </div>
             <ul class="header__list">
                 <li><a href="#">Games</a></li>
                 <li><a href="#">About Us</a></li>
@@ -132,7 +150,7 @@
     </footer>
     <section class="popup" id="popup">
         <div class="popup__window">
-            <form class="form popup__window__info box" id="myform" >
+            <form class="form popup__window__info box" id="myform">
                 <img alt="logo" class="popup__logo" src="./img/logo.svg">
                 <img width="15" height="15" src="./img/cross.png" alt="cross" id="close" style="margin-left:95%;">
                 <h4>Login</h4>
@@ -148,8 +166,10 @@
                     <p>OR</p>
                 </div>
                 <div class="popup__window__btn">
-                    <button onclick="window.location.href = 'https://www.facebook.com'"><img src="./img/facebook.png" width="15" height="15" alt="href">facebook</button>
-                    <button onclick="window.location.href = 'https://www.google.com'"><img src="./img/google.png" width="15" height="15" alt="href">Google</button>
+                    <button onclick="window.location.href = 'https://www.facebook.com'"><img src="./img/facebook.png"
+                            width="15" height="15" alt="href">facebook</button>
+                    <button onclick="window.location.href = 'https://www.google.com'"><img src="./img/google.png"
+                            width="15" height="15" alt="href">Google</button>
                 </div>
                 <p class="popup__window__register">Don't have an account?<a href="#">Register</a></p>
             </div>

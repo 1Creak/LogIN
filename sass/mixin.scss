@@ -13,3 +13,62 @@
     font-family: 'monserat-bold';
     font-size: $font-size-title;
 }
+@mixin burger {
+    @media screen and (max-width:1300px) {
+        display: block;
+    }
+}
+@mixin nav {
+    @media screen and (max-width:1300px) {
+        display: none;
+    }
+}
+@mixin message{
+    @media screen and(max-width:1100px)
+                  and (min-width:660px) {
+        width: 20%;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+@mixin getintouch {
+    @media screen and(max-width:660px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+@mixin contact{
+    @media  screen and (max-width: 800px) {
+        padding: 30px;
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+@mixin social{
+    @media screen and (max-width:800px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@mixin summary{
+    @media screen and(max-width:860px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@mixin logo{
+    @media screen and (max-width:500px) {
+        width: 70px;
+    }
+}
+@mixin contactRedLine{
+    @media screen and(max-width:500px) {
+        justify-content: center;
+    }
+}
+// @mixin popup{
+//     @media screen and(max-width: 450px) {
+        
+//     }
+// }

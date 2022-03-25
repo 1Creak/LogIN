@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('#login').click(function(){
+    $('button#login').click(function(){
         $('#popup').toggle('.active');
     })
     $('#close').click(function(){
@@ -32,4 +32,8 @@ $(document).ready(function(){
             }
         }
     });
+    $('#burg').click(function(){
+        $('#burgMenu').toggleClass('show');
+        console.log('hi');
+    })
 });

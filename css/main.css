@@ -250,6 +250,7 @@ ul {
 a {
   text-decoration: none;
   color: white;
+  white-space: nowrap;
 }
 
 h1,
@@ -277,6 +278,10 @@ ul {
           padding-inline-start: 0px;
 }
 
+p, span, a, button, li {
+  white-space: nowrap;
+}
+
 @font-face {
   font-family: 'monserat-bold';
   src: url("monserat-bold"), url("../fonts/Montserrat-ExtraBold.ttf") format("ttf"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
@@ -301,11 +306,13 @@ ul {
 body {
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 
 h1 {
   font-family: 'monserat-bold';
   font-size: 40px;
+  font-size: calc(20px + 20 * (100vw / 1800));
 }
 
 h2 {
@@ -316,7 +323,7 @@ h2 {
 h3 {
   font-family: 'monserat-bold';
   font-size: 18px;
-  padding: 0 0 10px 0;
+  padding: 10px 0 10px 0;
 }
 
 button {
@@ -394,6 +401,93 @@ label {
           justify-content: space-between;
 }
 
+.header__nav__menu {
+  display: none;
+  position: fixed;
+  right: -250px;
+  z-index: 2;
+  background-color: #181616;
+  padding: 10px 50px;
+  border-radius: 5%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (max-width: 1300px) {
+  .header__nav__menu {
+    display: block;
+  }
+}
+
+.header__nav__menu li {
+  margin: 20px 0;
+  text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.header__nav__menu li:first-child {
+  margin-top: 70px;
+}
+
+.header__nav__menu a:hover {
+  border-bottom: 2px solid #F20018;
+}
+
+.header__nav img {
+  right: 50px;
+}
+
+.header__nav__burg {
+  display: none;
+  background-color: red;
+  padding: 30px;
+  right: 40px;
+  z-index: 3;
+  position: fixed;
+  border-radius: 50%;
+  -webkit-box-shadow: 8px 5px 5px #700704;
+          box-shadow: 8px 5px 5px #700704;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .header__nav__burg {
+    display: block;
+  }
+}
+
+.header__nav__img {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 40px;
+  height: 3px;
+  top: 60px;
+  right: 50px;
+  background-color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .header__nav__img {
+    display: block;
+  }
+}
+
+.header__nav__img:before, .header__nav__img:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  width: 40px;
+  height: 3px;
+  background: white;
+}
+
+.header__nav__img:before {
+  top: -9px;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,6 +500,12 @@ label {
           justify-content: end;
 }
 
+@media screen and (max-width: 1300px) {
+  .header__list {
+    display: none;
+  }
+}
+
 .header__list li {
   margin-right: 30px;
   font-family: 'OpenSans-bold';
@@ -414,7 +514,7 @@ label {
   padding: 5px;
 }
 
-.header__list li:hover:not(:last-child) {
+.header__list li a:hover {
   border-bottom: 2px solid #F20018;
 }
 
@@ -428,6 +528,7 @@ label {
   font-family: 'OpenSans-regular';
   font-size: 24px;
   color: white;
+  font-size: calc(10px + 14 * (100vw / 1800));
 }
 
 .feedback {
@@ -438,6 +539,19 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 100px;
+}
+
+@media screen and (max-width: 660px) {
+  .feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .feedback__message {
@@ -451,8 +565,21 @@ label {
   width: 55%;
 }
 
+@media screen and (max-width: 1100px) and (min-width: 660px) {
+  .feedback__message {
+    width: 20%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+}
+
 .feedback__message button {
-  width: 33%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .feedback__contact__wrapper {
@@ -460,6 +587,14 @@ label {
   width: 75%;
   border: 1px solid #8080804f;
   padding: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .feedback__contact__wrapper {
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+  }
 }
 
 .feedback__contact p {
@@ -485,6 +620,15 @@ label {
   margin-top: 40px;
 }
 
+@media screen and (max-width: 800px) {
+  .feedback__contact__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .feedback__contact__list li {
   margin-right: 10px;
 }
@@ -505,6 +649,14 @@ label {
           align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .redline__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .redline__block__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,15 +673,26 @@ label {
   left: 9%;
 }
 
+@media screen and (max-width: 1300px) {
+  .redline__logo {
+    display: none;
+  }
+}
+
 .footer__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   padding: 50px 0;
-  width: 84%;
+  width: 110%;
+}
+
+@media screen and (max-width: 860px) {
+  .footer__nav {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .footer__nav__info {
@@ -544,7 +707,7 @@ label {
 
 .footer__nav__info a {
   font-family: 'OpenSans-regular';
-  font-size: 16px;
+  font-size: calc(9px + 7 * (100vw / 1800));
 }
 
 .footer__copyright {
@@ -565,12 +728,12 @@ label {
   font-family: 'OpenSans-regular';
   font-size: 14px;
   color: #CCCCCC;
-  width: 55%;
+  white-space: normal;
 }
 
 .popup {
   display: none;
-  z-index: 2;
+  z-index: 6;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -697,5 +860,17 @@ label {
 
 .error {
   margin-top: 0 !important;
+}
+
+.show {
+  right: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
+  .f_logo {
+    width: 70px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

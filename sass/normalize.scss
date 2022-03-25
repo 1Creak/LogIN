@@ -534,6 +534,7 @@ ul{
 a{
     text-decoration: none;
     color: white;
+    white-space: nowrap;
 }
 h1,
 h2,
@@ -551,4 +552,7 @@ p{
 }
 ul{
     padding-inline-start: 0px;
+}
+p, span, a, button, li { 
+    white-space: nowrap; 
 }
